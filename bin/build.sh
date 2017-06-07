@@ -15,4 +15,4 @@ bin/exec.sh vendor/bin/phing docker.init
 
 # Load example data
 
-bin/yii.sh fixture/load User,MediaFile,Locale,ContentSource,ContentSlug,ContentComponent,ComponentField --interactive=0
+bin/yii.sh fixture/load User,Mediafile,Locale,ContentSource,ContentSlug,ContentComponent,ComponentField --interactive=0
