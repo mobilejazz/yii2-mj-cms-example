@@ -6,6 +6,18 @@ ROOT_DIR=$(cd ${SCRIPT_DIR}/..; pwd)
 source ${SCRIPT_DIR}/common.sh
 trap "Exiting" SIGUSR1
 
+# Determine entrypoint
+
+ENTRYPOINT="/run.sh"
+
+if [ $(uname) == "Darwin" ]; then
+    ENTRYPOINT="/run-mac.sh"
+fi
+
+#
+cd ${ROOT_DIR} && ENTRYPOINT=${ENTRYPOINT} docker-compose up -d --build --remove-orphans
+
+
 cd ${ROOT_DIR} && docker-compose up -d --build --remove-orphans
 
 sleep 10    # hack to allow services to start
