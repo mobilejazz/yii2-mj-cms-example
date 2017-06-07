@@ -70,6 +70,9 @@ return [
         ],
         'urlManagerFrontend' => [
             'class' => 'mobilejazz\yii2\cms\frontend\components\FrontendUrlRules'
+        ],
+        'frontendUrlManager' => [
+            'class' => 'mobilejazz\yii2\cms\frontend\components\FrontendUrlRules'
         ]
     ],
     'as locale'           => [
