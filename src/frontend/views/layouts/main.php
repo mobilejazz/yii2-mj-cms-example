@@ -31,8 +31,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     $menu = Menu::findOne([ 'key' => 'main-menu', ]);
-    if (isset($menu))
-    {
+    if (isset($menu)) {
         $menu = NavUtils::buildMenu($menu);
     }
     NavBar::begin([
@@ -42,12 +41,9 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    if (isset($menu))
-    {
+    if (isset($menu)) {
         $menuItems = $menu;
-    }
-    else
-    {
+    } else {
         $menuItems = [
             [ 'label' => 'Home', 'url' => [ '/site/index' ] ],
             [ 'label' => 'About', 'url' => [ '/site/about' ] ],
@@ -55,13 +51,10 @@ AppAsset::register($this);
         ];
     }
 
-    if (Yii::$app->user->isGuest)
-    {
+    if (Yii::$app->user->isGuest) {
         $menuItems[] = [ 'label' => 'Signup', 'url' => [ '/site/signup' ] ];
         $menuItems[] = [ 'label' => 'Login', 'url' => [ '/site/login' ] ];
-    }
-    else
-    {
+    } else {
         $menuItems[] = '<li>' . Html::beginForm([ '/site/logout' ],
                 'post') . Html::submitButton('Logout (' . Yii::$app->user->identity->username . ')',
                 [ 'class' => 'btn btn-link logout' ]) . Html::endForm() . '</li>';

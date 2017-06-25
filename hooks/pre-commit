@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+ROOT_DIR="$( cd ${SCRIPT_DIR}/../.. && pwd )"
+
+cd ${ROOT_DIR}
+docker-compose exec -T web /exec-www.sh vendor/bin/php-cs-fixer fix ./ --rules=@PSR2 --dry-run
+
+if [ $? -ne 0 ]; then
+
+    echo -e "\n### Code format errors found. Please run bin/php-cs-fixer.sh to correct and then commit again ###" 1>&2
+    exit 1
+
+fi
+
+exit 0

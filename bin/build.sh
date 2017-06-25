@@ -28,3 +28,19 @@ bin/exec.sh vendor/bin/phing docker.init
 # Load example data
 
 bin/yii.sh fixture/load User,Mediafile,Locale,ContentSource,ContentSlug,ContentComponent,ComponentField --interactive=0
+
+# install git hooks
+#
+# NOTE: this is done via the build script instead of with Phing as it needs to be aware of the ROOT folder whereas
+# Phing can only access everything from src/ and lower as it is run within the docker machine.
+
+if [ ! -e "${ROOT_DIR}/.git/hooks/pre-commit" ]; then
+
+    cp "${ROOT_DIR}/hooks/pre-commit" "${ROOT_DIR}/.git/hooks/pre-commit"
+    echo "Installed pre-commit hook"
+
+else
+
+    echo "Existing pre-commit hook detected. Doing nothing"
+
+fi
