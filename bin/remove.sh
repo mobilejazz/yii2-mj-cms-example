@@ -6,4 +6,4 @@ ROOT_DIR=$(cd ${SCRIPT_DIR}/..; pwd)
 source ${SCRIPT_DIR}/common.sh
 trap "Exiting" SIGUSR1
 
-cd ${ROOT_DIR} && docker-compose down && docker volume prune && docker image prune --all
+cd ${ROOT_DIR} && docker-compose down
