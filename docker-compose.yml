@@ -20,7 +20,7 @@ services:
     depends_on:
     - db
     - adminer
-    image: mobilejazz/yii2-docker:apache-php7
+    image: mobilejazz/yii2-docker:apache-php5
     ports:
     - "80:80"
     volumes:
