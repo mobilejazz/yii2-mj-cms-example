@@ -17,7 +17,7 @@ return [
             'namespace' => 'common\fixtures',
           ],
         'message' => [
-            'class' => '@mobilejazz\yii2\cms\console\controllers\ExtendedMessageController'
+            'class' => 'mobilejazz\yii2\cms\console\controllers\ExtendedMessageController'
         ],
         'migrate'=>[
             'class'=>'fishvision\migrate\controllers\MigrateController',
