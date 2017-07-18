@@ -37,6 +37,7 @@ $ cd ~/Development                                              # Change to the 
 $ git clone git@github.com:mobilejazz/yii2-mj-cms-example.git   # Clone the yii2-mj-cms-example project
 $ cd yii2-mj-cms-example                                        # Change to the project directory
 $ bin/build.sh                                                  # Run the build script
+$ bin/start.sh                                                  # Start the Docker containers
 ```
 
 When the process completes you will be able to access the CMS at:
@@ -93,7 +94,7 @@ Needs changed to:
 
 ```
 $ cd ~/Development/yii2-mj-cms-example                  # Change to the yii2-mj-cms directory  
-$ bin/composer.sh update -vv                            # Clone the yii2-mj-cms project
+$ bin/composer.sh update -vv                            # Updates the dependencies to point to your locally checked out `yii2-mj-cms` repository
 ```
 
 You can now make changes to the Yii2 MJ CMS project code located in `~/Development/yii2-mj-cms` and those changes will be reflect in the test project.
