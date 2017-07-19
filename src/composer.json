@@ -17,7 +17,7 @@
   "prefer-stable": true,
   "require": {
     "php": ">=5.5.0",
-    "mobilejazz/yii2-mj-cms": "dev-develop"
+    "mobilejazz/yii2-mj-cms": "0.1.0.10"
   },
   "require-dev": {
     "yiisoft/yii2-debug": "~2.0.0",
