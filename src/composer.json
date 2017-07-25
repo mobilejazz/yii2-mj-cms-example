@@ -39,8 +39,8 @@
       "url": "https://asset-packagist.org"
     },
     {
-      "type": "path",
-      "url": "/Development/yii2-mj-cms"
+      "type": "vcs",
+      "url": "https://github.com/mobilejazz/yii2-mj-cms.git"
     },
     {
       "type": "vcs",
