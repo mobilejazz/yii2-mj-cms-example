@@ -22,7 +22,7 @@ cd ${ROOT_DIR} && docker-compose up -d --build --remove-orphans
 
 sleep 10    # hack to allow services to start
 
-bin/exec.sh composer install -vv
+bin/exec.sh composer install -vv --ignore-platform-reqs
 bin/exec.sh vendor/bin/phing docker.init
 
 # Load example data

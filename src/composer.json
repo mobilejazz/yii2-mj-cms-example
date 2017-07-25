@@ -16,7 +16,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": ">=5.5.0",
+    "php": ">=5.6",
     "mobilejazz/yii2-mj-cms": "0.1.0.10"
   },
   "require-dev": {
@@ -39,8 +39,8 @@
       "url": "https://asset-packagist.org"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/mobilejazz/yii2-mj-cms.git"
+      "type": "path",
+      "url": "/Development/yii2-mj-cms"
     },
     {
       "type": "vcs",
