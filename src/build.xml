@@ -29,7 +29,6 @@
     </target>
 
     <target name = "docker.init">
-        <phingcall target="composer.install"/>
         <phingcall target="init"/>
         <phingcall target="migrate"/>
     </target>
